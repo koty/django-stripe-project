@@ -1,0 +1,29 @@
+{% extends "./base_shop.html" %}
+
+{% block title %}Cart{% endblock title %}
+
+{% block content %}
+  {{ block.super }}
+  <form action="{% url 'shop:subscribe' %}" method="POST">
+    <script
+        src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+        data-key="{{ data_key }}"
+        data-name="{{ data_name }}"
+        data-description="{{ data_description }}">
+    </script>
+    <label>quantity</label>
+    <input type="number" name="my_quantity" required="required" />
+    <div>
+      <label>upcoming invoice</label>
+      <span>{{ upcoming_invoice }}</span>
+    </div>
+    <div>
+      <label>invoice item result</label>
+      <span>{{ invoice_item_result }}</span>
+    </div>
+    {% csrf_token %}
+  </form>
+  <div>
+    https://stripe.com/docs/testing#cards
+  </div>
+{% endblock content %}

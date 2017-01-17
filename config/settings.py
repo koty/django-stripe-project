@@ -171,7 +171,8 @@ LOGGING = {
             'level': 'INFO',
             'class': 'logging.handlers.RotatingFileHandler',
             'filename': os.path.join(LOG_ROOT, LOG_FILENAME),
-            'maxBytes': '16777216',  # 16MB
+            # 'filename': 'django.log',
+            'maxBytes': 16777216,  # 16MB
             'formatter': 'verbose'
         },
         'mail_admins': {

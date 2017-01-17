@@ -1,7 +1,0 @@
-DEBUG = True
-
-##############
-# STRIPE KEY #
-##############
-STRIPE_API_KEY = '<stripe-api-key>'
-STRIPE_PUBLISHABLE_KEY = '<stripe-publishable-key>'

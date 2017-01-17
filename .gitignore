@@ -10,3 +10,6 @@ local_settings.py
 .idea/
 .vagrant/
 Vagrantfile
+
+.python-version
+*.log
